@@ -14,6 +14,7 @@ import {
 
 // Your brand colors, used as inputs to generate the color scales
 const KEYCOLORS = {
+  // WFP 2026 brand colors (WFP HEX values)
   "wfp-blue": "#007DBC",
   "wfp-navy": "#002F5A",
   "wfp-aqua": "#008EB2",
@@ -26,6 +27,20 @@ const KEYCOLORS = {
   "wfp-purple": "#AC1294",
   "wfp-burgundy": "#950158",
   "wfp-black": "#000000",
+
+  // WFP 2026 brand colors (Pantone HEX values)
+  // "wfp-blue": "#0077C8",
+  // "wfp-navy": "#002E5D",
+  // "wfp-aqua": "#00AEC7",
+  // "wfp-darkgreen": "#00664F",
+  // "wfp-green": "#009F4D",
+  // "wfp-ivory": "#F1E6B2",
+  // "wfp-earthybrown": "#B86125",
+  // "wfp-orange": "#FC4C02",
+  // "wfp-red": "#E4002B",
+  // "wfp-purple": "#AD1AAC",
+  // "wfp-burgundy": "#890C58",
+  // "wfp-black": "#000000",
 
   "wfp-yellow": "#fcc30b", // deprecated WFP 2020 brand color; only used for warning color scale
 
