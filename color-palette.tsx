@@ -14,21 +14,21 @@ import {
 
 // Your brand colors, used as inputs to generate the color scales
 const KEYCOLORS = {
-  blue: "#174EA6",
-  mediumBlue: "#4285F4",
-  lightBlue: "#D2E3FC",
-  red: "#A50E0E",
-  mediumRed: "#EA4335",
-  lightRed: "#FAD2CF",
-  orange: "#E37400",
-  yellow: "#FBBC04",
-  lightYellow: "#FEEFC3",
-  green: "#0D652D",
-  mediumGreen: "#34A853",
-  lightGreen: "#CEEAD6",
-  lightGrey: "#F1F3F4",
-  grey: "#9AA0A6",
-  black: "#202124",
+  "wfp-blue": "#007DBC",
+  "wfp-navy": "#002F5A",
+  "wfp-aqua": "#008EB2",
+  "wfp-darkgreen": "#005D45",
+  "wfp-green": "#03924A",
+  "wfp-ivory": "#ECE1B1",
+  "wfp-earthybrown": "#AA5628",
+  "wfp-orange": "#F0512D",
+  "wfp-red": "#E3002B",
+  "wfp-purple": "#AC1294",
+  "wfp-burgundy": "#950158",
+  "wfp-black": "#000000",
+
+  "wfp-yellow": "#fcc30b", // deprecated WFP 2020 brand color; only used for warning color scale
+
 } as const satisfies Record<string, CssColor>
 
 // Background against which all contrast ratios are evaluated and generated
@@ -53,11 +53,16 @@ type ColorConfig = {
 // colorSpace: color space to use to generate the color scale (options: CAM02, CAM02p, LCH, LAB, HSL, HSLuv, HSV, RGB, OKLAB, OKLCH)
 // smooth: boolean flag to indicate if the color scale should be smoothed (true for smooth, false for sharp)
 const colorConfigs: ColorConfig[] = [
-  { name: "primary", keys: ["blue", "mediumBlue", "lightBlue"], colorSpace: "OKLCH", smooth: true },
-  { name: "danger", keys: ["red", "mediumRed", "lightRed"], colorSpace: "OKLCH", smooth: true },
-  { name: "warning", keys: ["orange", "yellow", "lightYellow"], colorSpace: "OKLCH", smooth: true },
-  { name: "success", keys: ["green", "mediumGreen", "lightGreen"], colorSpace: "OKLCH", smooth: true },
-  { name: "neutral", keys: ["black", "grey", "lightGrey"], colorSpace: "OKLCH", smooth: true },
+  { name: "neutral", keys: ["wfp-black"], colorSpace: "OKLCH", smooth: true },
+  { name: "blue", keys: ["wfp-blue", "wfp-navy"], colorSpace: "OKLCH", smooth: true },
+  { name: "aqua", keys: ["wfp-aqua"], colorSpace: "OKLCH", smooth: true },
+  { name: "green", keys: ["wfp-green", "wfp-darkgreen"], colorSpace: "OKLCH", smooth: true },
+  { name: "ivory", keys: ["wfp-ivory"], colorSpace: "OKLCH", smooth: false },
+  { name: "brown", keys: ["wfp-earthybrown"], colorSpace: "OKLCH", smooth: true },
+  { name: "orange", keys: ["wfp-orange"], colorSpace: "OKLCH", smooth: true },
+  { name: "red", keys: ["wfp-red"], colorSpace: "OKLCH", smooth: true },
+  { name: "purple", keys: ["wfp-purple", "wfp-burgundy"], colorSpace: "OKLCH", smooth: true },
+  { name: "warning", keys: ["wfp-yellow"], colorSpace: "OKLCH", smooth: false },
 ]
 
 const COLOR_NAMES = colorConfigs.map((config) => config.name)
