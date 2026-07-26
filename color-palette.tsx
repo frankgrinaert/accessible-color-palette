@@ -225,7 +225,7 @@ export default function ColorPalette() {
                         onClick={() => copyText(swatch.value)}
                       >
                         <div
-                          className={`w-full flex flex-col gap-1 p-3 text-xs ${
+                          className={`w-full flex flex-col gap-0.5 p-3 text-xs ${
                             useWhiteText ? "text-white" : "text-black"
                           }`}
                         >
