@@ -14,21 +14,16 @@ import {
 
 // Your brand colors, used as inputs to generate the color scales
 const KEYCOLORS = {
-  blue: "#174EA6",
-  mediumBlue: "#4285F4",
-  lightBlue: "#D2E3FC",
-  red: "#A50E0E",
-  mediumRed: "#EA4335",
-  lightRed: "#FAD2CF",
-  orange: "#E37400",
-  yellow: "#FBBC04",
-  lightYellow: "#FEEFC3",
-  green: "#0D652D",
-  mediumGreen: "#34A853",
-  lightGreen: "#CEEAD6",
-  lightGrey: "#F1F3F4",
-  grey: "#9AA0A6",
-  black: "#202124",
+  blue: "#36C5F0",
+  blueAccessible: "#1264A3",
+  yellow: "#ECB22E",
+  green: "#2EB67D",
+  greenAccessible: "#007A5A",
+  red: "#E01E5A",
+  aubergine: "#4A154B",
+  aubergineNull: "#611F69",
+  aubergineActive: "#7C3085",
+  black: "#000000",
 } as const satisfies Record<string, CssColor>
 
 // Background against which all contrast ratios are evaluated and generated
@@ -53,11 +48,12 @@ type ColorConfig = {
 // colorSpace: color space to use to generate the color scale (options: CAM02, CAM02p, LCH, LAB, HSL, HSLuv, HSV, RGB, OKLAB, OKLCH)
 // smooth: boolean flag to indicate if the color scale should be smoothed (true for smooth, false for sharp)
 const colorConfigs: ColorConfig[] = [
-  { name: "primary", keys: ["blue", "mediumBlue", "lightBlue"], colorSpace: "OKLCH", smooth: true },
-  { name: "danger", keys: ["red", "mediumRed", "lightRed"], colorSpace: "OKLCH", smooth: true },
-  { name: "warning", keys: ["orange", "yellow", "lightYellow"], colorSpace: "OKLCH", smooth: true },
-  { name: "success", keys: ["green", "mediumGreen", "lightGreen"], colorSpace: "OKLCH", smooth: true },
-  { name: "neutral", keys: ["black", "grey", "lightGrey"], colorSpace: "OKLCH", smooth: true },
+  { name: "blue", keys: ["blue", "blueAccessible"], colorSpace: "OKLCH", smooth: true },
+  { name: "yellow", keys: ["yellow"], colorSpace: "OKLCH", smooth: true },
+  { name: "green", keys: ["green", "greenAccessible"], colorSpace: "OKLCH", smooth: true },
+  { name: "red", keys: ["red"], colorSpace: "OKLCH", smooth: true },
+  { name: "aubergine", keys: ["aubergine", "aubergineNull", "aubergineActive"], colorSpace: "OKLCH", smooth: true },
+  { name: "neutral", keys: ["black"], colorSpace: "OKLCH", smooth: true },
 ]
 
 const COLOR_NAMES = colorConfigs.map((config) => config.name)
