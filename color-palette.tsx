@@ -47,6 +47,11 @@ type ColorConfig = {
   smooth: boolean
 }
 
+// Configure color scales for the accessible palette.
+// name: name of the color scale
+// keys: array of input key colors
+// colorSpace: color space to use to generate the color scale (options: CAM02, CAM02p, LCH, LAB, HSL, HSLuv, HSV, RGB, OKLAB, OKLCH)
+// smooth: boolean flag to indicate if the color scale should be smoothed (true for smooth, false for sharp)
 const colorConfigs: ColorConfig[] = [
   { name: "primary", keys: ["blue", "mediumBlue", "lightBlue"], colorSpace: "OKLCH", smooth: true },
   { name: "danger", keys: ["red", "mediumRed", "lightRed"], colorSpace: "OKLCH", smooth: true },
